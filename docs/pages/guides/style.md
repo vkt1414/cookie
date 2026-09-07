@@ -31,7 +31,7 @@ options:
 ```yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "v4.5.0"
+    rev: "v6.0.0"
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -111,7 +111,7 @@ Here is the snippet to add the formatter to your `.pre-commit-config.yml`
 
 ```yaml
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: "v0.3.0"
+  rev: "v0.16.6"
   hooks:
     #  id: ruff would go here if using both
     - id: ruff-format
@@ -141,7 +141,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black-pre-commit-mirror
-  rev: "24.2.0"
+  rev: "26.5.1"
   hooks:
     - id: black
 ```
@@ -180,7 +180,7 @@ markdown and restructured text. Note that because black is in
 
 ```yaml
 - repo: https://github.com/adamchainz/blacken-docs
-  rev: "1.16.0"
+  rev: "1.20.0"
   hooks:
     - id: blacken-docs
       additional_dependencies: [black==24.*]
@@ -201,7 +201,7 @@ pre-commit hook.
 
 ```yaml
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: "v0.3.0"
+  rev: "v0.16.6"
   hooks:
     - id: ruff
       args: ["--fix", "--show-fixes"]
@@ -352,7 +352,7 @@ use the manual stage, it's opt-in instead of automatic.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v2.4.0"
+  rev: "v2.6.0"
   hooks:
     - id: pycln
       args: [--all]
@@ -392,7 +392,7 @@ the flake8 addition for pre-commit, with the `bugbear` plugin:
 
 ```yaml
 - repo: https://github.com/pycqa/flake8
-  rev: "7.0.0"
+  rev: "7.3.0"
   hooks:
     - id: flake8
       additional_dependencies: [flake8-bugbear]
@@ -465,7 +465,7 @@ pre-commit config will work:
 
 ```yaml
 - repo: https://github.com/PyCQA/isort
-  rev: "5.13.2"
+  rev: "9.0.1"
   hooks:
     - id: isort
 ```
@@ -490,7 +490,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v3.15.1"
+  rev: "v3.21.2"
   hooks:
     - id: pyupgrade
       args: ["--py38-plus"]
@@ -535,7 +535,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v1.8.0"
+  rev: "v2.3.1"
   hooks:
     - id: mypy
       files: src
@@ -612,7 +612,7 @@ Add the following to your pre-commit config:
 
 ```yaml
 - repo: https://github.com/mgedmin/check-manifest
-  rev: "0.49"
+  rev: "0.51"
   hooks:
     - id: check-manifest
 ```
@@ -646,7 +646,7 @@ important parts (like Python classifiers) are in sync. This tool,
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
-  rev: "v2.5.0"
+  rev: "v3.2.0"
   hooks:
     - id: setup-cfg-fmt
       args: [--include-version-classifiers, --max-py-version=3.12]
@@ -665,7 +665,7 @@ than a list of "valid" words. To use:
 
 ```yaml
 - repo: https://github.com/codespell-project/codespell
-  rev: "v2.2.6"
+  rev: "v2.4.3"
   hooks:
     - id: codespell
       args: ["-L", "sur,nd"]
@@ -747,7 +747,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v17.0.6"
+  rev: "v23.1.0"
   hooks:
     - id: clang-format
       types_or: [c++, c, cuda]
@@ -764,7 +764,7 @@ If you have shell scripts, you can protect against common mistakes using
 
 ```yaml
 - repo: https://github.com/shellcheck-py/shellcheck-py
-  rev: "v0.9.0.6"
+  rev: "v0.11.0.1-1"
   hooks:
     - id: shellcheck
 ```
@@ -810,7 +810,7 @@ can even get all [SchemaStore][]'s plugins with the
 
 ```yaml
 - repo: https://github.com/abravalheri/validate-pyproject
-  rev: "v0.16"
+  rev: "0.26"
   hooks:
     - id: validate-pyproject
       additional_dependencies: ["validate-pyproject-schema-store[all]"]
@@ -824,7 +824,7 @@ schemas, and you can load them via URL. It work on JSON, YAML, and TOML.
 
 ```yaml
 - repo: https://github.com/python-jsonschema/check-jsonschema
-  rev: "0.28.0"
+  rev: "0.38.0"
   hooks:
     - id: check-dependabot
     - id: check-github-workflows
@@ -894,7 +894,7 @@ You also might like the following hook, which cleans Jupyter outputs:
 
 ```yaml
 - repo: https://github.com/kynan/nbstripout
-  rev: "0.7.1"
+  rev: "0.9.1"
   hooks:
     - id: nbstripout
 ```
